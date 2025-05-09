@@ -17,7 +17,7 @@ const CartItem = ({ id, name, price, quantity}:Props) => {
   return (
     <Box className="border-b-[#F5EEEc] border-b-2">
         <Box className="w-full flex justify-end "><button className='text-[#AD8A85]'
-        onClick={() => removeItem(id)}>Clear all</button></Box>
+        onClick={() => removeItem(id)}>Clear</button></Box>
         
         <Box>
             <Typography className="text-[#260F08] text-sm">

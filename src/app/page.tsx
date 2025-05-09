@@ -12,7 +12,7 @@ const Home = () => {
       <Box className="flex">
         <Box className="flex flex-wrap justify-between">
           {data.map((item) => {
-            return <Product key={item.id} {...item} />;
+            return <Product quantity={0} key={item.id} {...item} />;
           })}
         </Box>
         <Cart />
