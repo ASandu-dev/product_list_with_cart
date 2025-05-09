@@ -29,7 +29,7 @@ const Product = ({ id, image, name, category, price, quantity }: Props) => {
     <Box className="flex flex-col mt-8">
       <Image
         className="rounded-lg"
-        src={image.desktop}
+        src={`${image.desktop}`}
         alt="product image"
         width={240}
         height={240}

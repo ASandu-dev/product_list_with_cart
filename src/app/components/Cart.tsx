@@ -22,7 +22,7 @@ const Cart = () => {
         <Box className="flex flex-col items-center">
           <Image
             className="w-full p-8"
-            src={"/assets/images/illustration-empty-cart.svg"}
+            src={"./assets/images/illustration-empty-cart.svg"}
             alt="empty cart"
             width={250}
             height={250}
