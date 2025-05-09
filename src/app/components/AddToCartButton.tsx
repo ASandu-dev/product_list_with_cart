@@ -39,7 +39,7 @@ const AddToCartButton = ({ id, name, price, isItemInCart }: Props) => {
       ) : (
         <button className="flex" onClick={() => addItem({ id, name, price, quantity: 1 })}>
           <Image
-            src="/assets/images/icon-add-to-cart.svg"
+            src="./assets/images/icon-add-to-cart.svg"
             alt="cart"
             width={16}
             height={16}
