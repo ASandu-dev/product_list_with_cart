@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Red_Hat_Text } from "next/font/google";
 import "./globals.css";
+import theme from "../../styles/theme";
+import { ThemeProvider } from "@mui/material/styles";
+import { CartProvider } from "./components/CartContext";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const redHatText = Red_Hat_Text({
+  weight: ["400", "500", "700"], // 400: Regular, 500: Medium/SemiBold, 700: Bold
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-redhat-text",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -24,10 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${redHatText.variable} antialiased`}>
+        <ThemeProvider theme={theme}>
+          <CartProvider>{children}</CartProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
