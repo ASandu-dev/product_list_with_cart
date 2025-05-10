@@ -25,7 +25,7 @@ const Cart = () => {
   };
 
   return (
-    <Box className="bg-white w-[60vw] relative bottom-12 ml-4 rounded-2xl">
+    <Box className="bg-white sm:w-[60vw] mt-4 relative sm:bottom-12 sm:ml-4 rounded-2xl">
       <Typography variant="h6" className="text-[#C73B0f] p-4">
         Your Cart ({totalItems})
       </Typography>
@@ -33,7 +33,7 @@ const Cart = () => {
       {cart.length === 0 ? (
         <Box className="flex flex-col items-center">
           <Image
-            className="w-full  p-8"
+            className="w-full p-8"
             src={"./assets/images/illustration-empty-cart.svg"}
             alt="empty cart"
             width={250}

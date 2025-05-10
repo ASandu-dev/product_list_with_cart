@@ -7,10 +7,10 @@ import Cart from "./components/Cart";
 
 const Home = () => {
   return (
-    <Container maxWidth="lg" className="my-8">
+    <Container maxWidth="lg" className="my-8 flex flex-col items-center">
       <Typography variant="h1">Deserts</Typography>
-      <Box className="flex">
-        <Box className="flex flex-wrap justify-between">
+      <Box className="flex flex-col sm:flex-row">
+        <Box className="flex flex-wrap justify-center sm:justify-between">
           {data.map((item) => {
             return <Product quantity={0} key={item.id} {...item} />;
           })}
