@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  background-color: hsl(13, 31%, 94%);
+  background-color: #f4edeb;
 }
 h4 {
   color: hsl(14, 25%, 72%);

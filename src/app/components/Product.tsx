@@ -34,7 +34,7 @@ const Product = ({ id, image, name, category, price, quantity }: Props) => {
         width={240}
         height={240}
       />
-      <AddToCartButton id={id} name={name} price={price} quantity={quantity} isItemInCart={isItemInCart} />
+      <AddToCartButton id={id} name={name} price={price} quantity={quantity} isItemInCart={isItemInCart} image={image} />
       <Box className="w-fit flex flex-col justify-between">
         <Typography variant="h4" className="text-[#260F08]">
           {category}

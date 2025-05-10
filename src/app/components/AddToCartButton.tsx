@@ -4,15 +4,23 @@ import Image from "next/image";
 import { Box } from "@mui/material";
 import { useCart } from "./CartContext";
 
+interface ImageVariants {
+  thumbnail: string;
+  mobile: string;
+  tablet: string;
+  desktop: string;
+}
+
 interface Props {
   isItemInCart: boolean;
   id: number;
   name: string;
   quantity: number;
   price: number;
+  image: ImageVariants;
 }
 
-const AddToCartButton = ({ id, name, price, isItemInCart }: Props) => {
+const AddToCartButton = ({ id, name, price, isItemInCart, image }: Props) => {
   const { addItem, updateQuantity, cart } = useCart();
 
   const quantity = cart.find(item => item.id === id)?.quantity || 0;
@@ -37,7 +45,10 @@ const AddToCartButton = ({ id, name, price, isItemInCart }: Props) => {
           onClick={() => updateQuantity(id, quantity + 1)}>+</button>
         </Box>
       ) : (
-        <button className="flex" onClick={() => addItem({ id, name, price, quantity: 1 })}>
+        <button className="flex" onClick={() => addItem({
+          id, name, price, quantity: 1,
+          image: image
+        })}>
           <Image
             src="./assets/images/icon-add-to-cart.svg"
             alt="cart"

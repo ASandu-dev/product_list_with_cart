@@ -1,11 +1,18 @@
 "use client";
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
+interface ImageVariants {
+  thumbnail: string;
+  mobile: string;
+  tablet: string;
+  desktop: string;
+}
 interface CartItem {
   id: number;
   name: string;
   price: number;
   quantity: number;
+  image: ImageVariants;
 }
 
 interface CartContextType {

@@ -4,11 +4,18 @@ import React from "react";
 import { useCart } from "./CartContext";
 import Image from "next/image";
 
+interface ImageVariants {
+  thumbnail: string;
+  mobile: string;
+  tablet: string;
+  desktop: string;
+}
 interface Props {
   id: number;
   name: string;
   price: number;
   quantity: number;
+  image: ImageVariants;
 }
 
 const CartItem = ({ id, name, price, quantity }: Props) => {
